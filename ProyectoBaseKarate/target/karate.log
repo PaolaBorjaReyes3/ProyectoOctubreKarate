@@ -1,0 +1,88 @@
+13:10:41.273 [main]  INFO  com.intuit.karate - Karate version: 1.4.0
+13:10:41.664 [main]  INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 7
+13:10:42.783 [main]  DEBUG com.intuit.karate - request:
+1 > GET https://api.example.com/users/1
+1 > Host: api.example.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:10:42.943 [main]  ERROR com.intuit.karate - java.net.UnknownHostException: No such host is known (api.example.com), http call failed after 443 milliseconds for url: https://api.example.com/users/1
+13:10:42.949 [main]  ERROR com.intuit.karate - src/test/resources/feature/testApi.feature:9
+When method GET
+http call failed after 443 milliseconds for url: https://api.example.com/users/1
+java.net.UnknownHostException: No such host is known (api.example.com)
+src/test/resources/feature/testApi.feature:9
+13:10:43.498 [main]  INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/resources/feature/testApi.feature
+13:17:46.053 [main]  INFO  com.intuit.karate - Karate version: 1.4.0
+13:17:46.394 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1692382666390
+13:17:46.419 [main]  INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 7
+13:17:47.387 [main]  DEBUG com.intuit.karate - request:
+1 > GET https://reqres.in/api/users%3Fpage=2
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:17:48.076 [main]  DEBUG com.intuit.karate - response time in milliseconds: 685
+1 < 200
+1 < Date: Fri, 18 Aug 2023 18:17:48 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"2c1-N6Rqerxquq2kgQhL51EiSg4x0R8"
+1 < Via: 1.1 vegur
+1 < Cache-Control: max-age=14400
+1 < CF-Cache-Status: MISS
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aH%2BYRGwzo1eQDXGLTq9cAyZgRcCpoaT4AH0h4IEel3KXvF6Rp%2BKs3sJ%2B%2BXE1UgiL5inF%2Bd2Ak2dtq5BPV2wLHfq1g4Ex4b8EwjKLbGCac1i5w28tDs%2B9wicLOQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Vary: Accept-Encoding
+1 < Server: cloudflare
+1 < CF-RAY: 7f8c27df8f20daad-MIA
+{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"},{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},{"id":3,"name":"true red","year":2002,"color":"#BF1932","pantone_value":"19-1664"},{"id":4,"name":"aqua sky","year":2003,"color":"#7BC4C4","pantone_value":"14-4811"},{"id":5,"name":"tigerlily","year":2004,"color":"#E2583E","pantone_value":"17-1456"},{"id":6,"name":"blue turquoise","year":2005,"color":"#53B0AE","pantone_value":"15-5217"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+
+13:17:48.151 [main]  ERROR com.intuit.karate - src/test/resources/feature/testApi.feature:11
+And match response == { id: 1, name: 'John' }
+match failed: EQUALS
+  $ | not equal | actual has 4 more key(s) than expected - {"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"},{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},{"id":3,"name":"true red","year":2002,"color":"#BF1932","pantone_value":"19-1664"},{"id":4,"name":"aqua sky","year":2003,"color":"#7BC4C4","pantone_value":"14-4811"},{"id":5,"name":"tigerlily","year":2004,"color":"#E2583E","pantone_value":"17-1456"},{"id":6,"name":"blue turquoise","year":2005,"color":"#53B0AE","pantone_value":"15-5217"}],"support":{"url":"https:\/\/reqres.in\/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} (MAP:MAP)
+  {"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"},{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},{"id":3,"name":"true red","year":2002,"color":"#BF1932","pantone_value":"19-1664"},{"id":4,"name":"aqua sky","year":2003,"color":"#7BC4C4","pantone_value":"14-4811"},{"id":5,"name":"tigerlily","year":2004,"color":"#E2583E","pantone_value":"17-1456"},{"id":6,"name":"blue turquoise","year":2005,"color":"#53B0AE","pantone_value":"15-5217"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+  {"id":1,"name":"John"}
+
+
+src/test/resources/feature/testApi.feature:11
+13:17:48.691 [main]  INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/resources/feature/testApi.feature
+13:18:38.817 [main]  INFO  com.intuit.karate - Karate version: 1.4.0
+13:18:39.208 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1692382719203
+13:18:39.236 [main]  INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 7
+13:18:40.280 [main]  DEBUG com.intuit.karate - request:
+1 > GET https://reqres.in/api/users%3Fpage=2
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:18:40.866 [main]  DEBUG com.intuit.karate - response time in milliseconds: 583
+1 < 200
+1 < Date: Fri, 18 Aug 2023 18:18:41 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"2c1-N6Rqerxquq2kgQhL51EiSg4x0R8"
+1 < Via: 1.1 vegur
+1 < Cache-Control: max-age=14400
+1 < CF-Cache-Status: MISS
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8WHwXcNvRGLLT50bGxbTc0NuBwfSCdRpmZZ7OGf87rNacYGs2aa1duxOaSgYLXgO9feBH1MjyIquidJD2IeyyPXrKfUELkzVLLw8HOOHGPHfEpe%2FeYu8iIz4xg%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Vary: Accept-Encoding
+1 < Server: cloudflare
+1 < CF-RAY: 7f8c29298f978db5-MIA
+{"page":1,"per_page":6,"total":12,"total_pages":2,"data":[{"id":1,"name":"cerulean","year":2000,"color":"#98B2D1","pantone_value":"15-4020"},{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},{"id":3,"name":"true red","year":2002,"color":"#BF1932","pantone_value":"19-1664"},{"id":4,"name":"aqua sky","year":2003,"color":"#7BC4C4","pantone_value":"14-4811"},{"id":5,"name":"tigerlily","year":2004,"color":"#E2583E","pantone_value":"17-1456"},{"id":6,"name":"blue turquoise","year":2005,"color":"#53B0AE","pantone_value":"15-5217"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+
+13:18:41.393 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/resources/feature/testApi.feature
