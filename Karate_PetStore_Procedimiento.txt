@@ -1,0 +1,44 @@
+_____________________________________________________________________________________|PET STORE|________________________________________________________________________
+
+-------------------
+|1. PRE-REQUISITOS|
+-------------------
+-Máquina remota Windows 10
+-IntelliJ IDEA Community Edition 2023.1.5
+-JDK 11
+-Karate framework
+-JUnit
+-Maven 
+
+------------------------
+|2. PASOS PARA EJECUTAR|
+------------------------
+1. Iniciar IntelliJ 
+2. Clic en File
+3. Clic en Open
+4. Seleccionar el ejecutable "ProyectoBaseKarate1"
+5. Abrir el testApi.feature. Ruta: /src/test/java/api  
+6. Clic en RUN   
+(En caso no funcione el caso 2, comprobar que el ID sea el mismo que se creo en el primer caso)
+
+---------------
+|3. RESULTADOS|
+---------------
+• Añadir una mascota a la tienda: 
+
+	Se añadió correctamente -- 200 (ÉXITO)
+
+--------------------------------------------------------------------------
+• Consultar la mascota ingresada previamente (Búsqueda por ID)
+
+	Se consultó correctamente -- 200 (ÉXITO)
+
+--------------------------------------------------------------------------
+• Actualizar el nombre de la mascota y el estatus de la mascota a “sold”
+
+	Se editó correctamente -- 200 (ÉXITO)
+
+--------------------------------------------------------------------------
+• Consultar la mascota modificada por estatus (Búsqueda por estatus)
+
+	Se consultó correctamente -- 200 (ÉXITO)
