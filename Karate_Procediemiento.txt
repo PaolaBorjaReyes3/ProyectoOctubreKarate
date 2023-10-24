@@ -1,0 +1,21 @@
+_____________________________________________________________________________________|PET STORE|________________________________________________________________________
+
+-------------------
+|1. PRE-REQUISITOS|
+-------------------
+-Máquina remota Windows 10
+-IntelliJ IDEA Community Edition 2023.1.5
+-JDK 11
+-Karate framework
+-JUnit
+-Maven 
+
+------------------------
+|2. PASOS PARA EJECUTAR|
+------------------------
+1. Iniciar IntelliJ 
+2. Clic en File
+3. Clic en Open
+4. Seleccionar el ejecutable "ProyectoBaseKarate1"
+5. Abrir el testApi.feature. Ruta: /src/test/java/api  
+6. Clic en RUN   
